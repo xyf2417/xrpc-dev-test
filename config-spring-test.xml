@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xrpc="http://pro.xyf/schema/xrpc"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://pro.xyf/schema/xrpc http://pro.xyf/schema/xrpc.xsd">
+       
+    
+	
+	<xrpc:application id="application" name="helloApplication"/>
+	
+	<xrpc:registry id="registry" type="zookeeper">
+    	<xrpc:addresses>
+    		<xrpc:registryAddress host="127.0.0.1" port="2181"/>
+    		<xrpc:registryAddress host="127.0.0.3" port="2182"/>
+    	</xrpc:addresses>
+    </xrpc:registry>
+	
+</beans>
